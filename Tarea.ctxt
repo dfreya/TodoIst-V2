@@ -2,4 +2,10 @@
 comment0.params=describeTarea
 comment0.target=Tarea(java.lang.String)
 comment0.text=\r\n\ Constructor\ de\ la\ tarea\ con\ la\ descrepcion.\r\n\ La\ tare\ se\ inicializa\ sin\ completar.\r\n
-numComments=1
+comment1.params=
+comment1.target=java.lang.String\ getDescripcion()
+comment1.text=\r\n\ Devuelve\ el\ nombre\ de\ la\ tarea.\r\n
+comment2.params=
+comment2.target=boolean\ getEstadoTarea()
+comment2.text=\r\n\ Devuelve\ sie\ sta\ acabada\ la\ tarea\ o\ no.\r\n
+numComments=3

@@ -20,4 +20,17 @@ public class Tarea
          estadoTarea = false;
     }
     
+    /**
+     * Devuelve el nombre de la tarea.
+     */
+    public String getDescripcion(){
+        return descripcion;
+    }
+    
+    /**
+     * Devuelve sie sta acabada la tarea o no.
+     */
+    public boolean getEstadoTarea(){
+        return estadoTarea;
+    }
 }
