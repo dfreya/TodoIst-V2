@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=listaTareas()
+comment0.text=\r\n\ Constructor\ de\ la\ lista\ de\ Tareas.\r\n
+comment1.params=descripcion
+comment1.target=void\ a\u00F1adirTarea(java.lang.String)
+comment1.text=\r\n\ A\u00F1adir\ una\ tarea.\r\n
+numComments=2

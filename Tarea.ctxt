@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=describeTarea
+comment0.target=Tarea(java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ la\ tarea\ con\ la\ descrepcion.\r\n\ La\ tare\ se\ inicializa\ sin\ completar.\r\n
+numComments=1
