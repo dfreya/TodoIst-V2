@@ -33,4 +33,11 @@ public class Tarea
     public boolean getEstadoTarea(){
         return estadoTarea;
     }
+    
+    /**
+     * Metodo que cambia la tarea ha realizada.
+     */
+    public void completada(){
+        estadoTarea = true;
+    }
 }
