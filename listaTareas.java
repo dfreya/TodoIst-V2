@@ -51,7 +51,7 @@ public class listaTareas
     }
     
     /**
-     * 
+     * Mustra las tareas con Coincidencias.
      */
      public void mostrarTareasCoincidentes(String textoABuscar)
      {
@@ -59,8 +59,6 @@ public class listaTareas
          int numeroDeCoincidencias = 0;
          String textoAMostrar ="";
          for (Tarea tareaAMostrar : listaDeTareas){
-             
-             
              if (tareaAMostrar.getDescripcion().contains(textoABuscar)){
                  textoAMostrar = (posicion + "-. " + tareaAMostrar.getDescripcion());
                  if (tareaAMostrar.getEstadoTarea()){
@@ -79,4 +77,14 @@ public class listaTareas
               System.out.println("Hay " + numeroDeCoincidencias + " tareas encontradas con el texto " + textoABuscar + " .");
          }
      }
+    
+    /**
+     * Elimina una tarea seleccionada.
+     */
+    public void eliminarTarea (int numeroTarea){
+        int posicion = numeroTarea -1;
+        if (posicion >= 0 && posicion < listaDeTareas.size()){
+            listaDeTareas.remove(posicion);
+        }        
+    }
 }
