@@ -57,22 +57,25 @@ public class listaTareas
      {
          int posicion = 1;
          int numeroDeCoincidencias = 0;
-         for (Tarea tarea : listaDeTareas)
-         {
-             if (tarea.contains(textoABuscar))
-             {
-                 System.out.println(posicion + "-. " + tarea);
+         String textoAMostrar ="";
+         for (Tarea tareaAMostrar : listaDeTareas){
+             
+             
+             if (tareaAMostrar.getDescripcion().contains(textoABuscar)){
+                 textoAMostrar = (posicion + "-. " + tareaAMostrar.getDescripcion());
+                 if (tareaAMostrar.getEstadoTarea()){
+                     textoAMostrar += " HECHO.";
+                 }
                  numeroDeCoincidencias ++;
-             }             
+             }   
+             System.out.println(textoAMostrar);
              posicion ++;
          }
          
-         if (numeroDeCoincidencias == 0)
-         {
+         if (numeroDeCoincidencias == 0){
              System.out.println("No hay tareas que contengan el texto " + textoABuscar + ".");
          }
-         else
-         {
+         else{
               System.out.println("Hay " + numeroDeCoincidencias + " tareas encontradas con el texto " + textoABuscar + " .");
          }
      }
