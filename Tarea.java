@@ -1,4 +1,4 @@
-
+import java.time.LocalDate;
 /**
  * 
  */
@@ -8,8 +8,11 @@ public class Tarea
     private String descripcion;
     // Estado de la tarea , si esta completada o no.
     private boolean estadoTarea;
-    
-
+    //almacena la prioridad de al tarea.
+    private int prioridad;
+    //guarda la fecha de vencimiendo.
+    private LocalDate fecha;
+        
     /**
      * Constructor de la tarea con la descrepcion.
      * La tare se inicializa sin completar.
@@ -18,6 +21,8 @@ public class Tarea
     {
          descripcion = describeTarea;
          estadoTarea = false;
+         prioridad = 0;
+         fecha = null;
     }
     
     /**
@@ -40,4 +45,44 @@ public class Tarea
     public void completada(){
         estadoTarea = true;
     }
+    
+    /**
+     * 
+     */
+      public String toString(){
+        String textoADevolver = "";
+        if (estadoTarea) {
+            textoADevolver = textoADevolver + "HECHA ";
+        }
+        textoADevolver += fecha + " " + descripcion + "(" + prioridad + ")." ;
+        return textoADevolver;
+    }
+    
+    /**
+     * 
+     */
+    public int getPrioridad (){
+        return prioridad;
+    }
+    
+    
+     /**
+     * 
+     */
+    public void setPrioridad (int nuevaPrioridad){
+        if (nuevaPrioridad >= 0 && nuevaPrioridad <= 5){
+            prioridad = nuevaPrioridad;
+        }        
+    }
+    
+    /**
+     * Metodo para fijar la fecha.
+     */
+    public void setFecha(int dia, int mes, int year){
+        fecha = fecha.of(year, mes, dia);
+    }
+    
 }
+    
+    
+    
